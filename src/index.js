@@ -5,13 +5,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from './components/ThemeContext';
 import { BrowserRouter } from 'react-router-dom';
+import  toggleColorMode  from './components/ToggleColorMode';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ThemeProvider>
       <BrowserRouter>
-    <App />
+    <App toggleColorMode={toggleColorMode}/>
     </BrowserRouter>
     </ThemeProvider>
   </React.StrictMode>
